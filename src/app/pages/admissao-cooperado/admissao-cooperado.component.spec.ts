@@ -3,23 +3,22 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AdmissaoCooperadoComponent } from './admissao-cooperado.component';
 
 describe('AdmissaoCooperadoComponent', () => {
-  let component: AdmissaoCooperadoComponent;
-  let fixture: ComponentFixture<AdmissaoCooperadoComponent>;
+	let component: AdmissaoCooperadoComponent;
+	let fixture: ComponentFixture<AdmissaoCooperadoComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ AdmissaoCooperadoComponent ]
-    })
-    .compileComponents();
-  });
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			declarations: [AdmissaoCooperadoComponent],
+		}).compileComponents();
+	});
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(AdmissaoCooperadoComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+	beforeEach(() => {
+		fixture = TestBed.createComponent(AdmissaoCooperadoComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });
