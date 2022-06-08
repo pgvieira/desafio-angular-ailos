@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:display=swap');
+
 :root {
   --color-primary: rgb(22, 92, 125);
+  --color-white: rgb(255, 255, 255);
+  --color-background: rgb(232, 239, 242);
+}
+
+html, body {
+  height: 100%;
 }

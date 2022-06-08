@@ -1,0 +1,43 @@
+.navbar {
+	padding: 1.25rem;
+}
+
+.page-title {
+	font-family: 'Exo 2', sans-serif;
+	font-size: 32px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.breadcrumb {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+  margin-top: .5rem;
+  margin-bottom: 0;
+}
+
+.customized-symbol {
+  color: var(--color-primary);
+  font-size: 40px;
+}
+
+.btn-outline-custom {
+  height: 30px;
+  color: var(--color-primary);
+  border-radius: 20px;
+  padding: 0.1rem 0.7rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+}
+.user-options {
+  display: flex;
+  align-items: center
+}
+
+.user-image {
+  width: 45px;
+  border: 2px solid var(--color-primary);
+}

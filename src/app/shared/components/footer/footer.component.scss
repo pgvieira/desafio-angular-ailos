@@ -1,0 +1,29 @@
+.btn {
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 2px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+.btn:focus {
+  outline:0;
+  box-shadow: none;
+}
+
+.button-primary {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.button-outline-primary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.navbar {
+  display: block;
+  padding: 20px 20px;
+}
