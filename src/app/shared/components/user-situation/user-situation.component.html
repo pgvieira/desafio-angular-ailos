@@ -1,0 +1,20 @@
+<div>
+	<div class="card-title">
+		<h1>Situação cadastral do CPF</h1>
+		<span>Consulta na Receita Federal</span>
+	</div>
+	<div class="card-name">
+		<span>nome</span>
+		<div class="name">
+			<span>Nome</span>
+			<span>{{ user_situation?.name }}</span>
+		</div>
+	</div>
+	<div class="card-situacao">
+		<span>ok/nok</span>
+		<div class="situacao">
+			<span>Situação do CPF</span>
+			<span>{{ user_situation?.situation === 1 ? 'Regular' : '' }}</span>
+		</div>
+	</div>
+</div>
