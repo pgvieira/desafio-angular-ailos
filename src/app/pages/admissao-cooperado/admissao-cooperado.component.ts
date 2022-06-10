@@ -53,11 +53,10 @@ export class AdmissaoCooperadoComponent implements OnInit {
 			(value) => {
 				this.user_situation = value[0];
 			},
-			() => {
-				this.disableButton = false;
-			},
+			() => {},
 			() => {
 				this.loading = false;
+				this.disableButton = false;
 			}
 		);
 	}
