@@ -1,25 +1,19 @@
 .nav-sidebar {
-  height: 100%;
-  width: 150px;
-  overflow: auto;
-  background-color: var(--color-primary);
-  .icon {
-    justify-content: space-around;
-    display: flex;
-    margin-top: 1.5em;
-  }
-  .img-icon {
-    width: 5em;
-  }
-  .img-icon-nav {
-    width: 2.5em;
-  }
-  .container {
-    justify-content: space-around;
-    display: grid;
-    .material-icons {
-      font-size: 2.5em;
-      color: white;
-    }
-  }
+	width: 150px;
+	background-color: var(--color-primary);
+	.icon {
+		margin-top: 1.5em;
+	}
+	.img-icon {
+		width: 5em;
+	}
+	.img-icon-nav {
+		width: 2.5em;
+	}
+	.container {
+		.material-icons {
+			font-size: 2.5em;
+			color: white;
+		}
+	}
 }

@@ -1,8 +1,73 @@
 .main-content {
-  height: calc(100% - 182px);
-  width: 100%;
-  background-color: var(--color-background);
+	height: calc(100% - 182px);
+	background-color: var(--color-background);
 }
-.form-group {
-  display: flex;
+.timeline {
+	height: 150px;
+}
+
+h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 22px;
+	font-weight: 600;
+	color: var(--color-black-ailos);
+	margin-bottom: 0.5rem;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color: var(--color-gray-4);
+	margin-bottom: 0.25rem;
+}
+
+form {
+	margin-top: 1rem;
+}
+
+label {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+input {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	border-radius: 0;
+	width: 350px;
+	margin-right: 1rem;
+}
+
+.ng-invalid {
+	border-color: var(--color-danger);
+}
+
+.form-error {
+	color: var(--color-danger);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 11px;
+	font-weight: 600;
+}
+
+.btn {
+	height: 35px;
+	padding: 0 24px;
+	border-radius: 2px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	margin-top: 16px;
+}
+.btn:focus {
+	outline: 0;
+	box-shadow: none;
+}
+
+.button-primary {
+	color: var(--color-white);
+	background-color: var(--color-primary);
+	border-color: var(--color-primary);
 }

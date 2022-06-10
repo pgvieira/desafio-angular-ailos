@@ -15,7 +15,7 @@ export class AdmissaoCooperadoComponent implements OnInit {
 
 	constructor(private consultaService: ConsultaCpfService) {
 		this.formCPF = new FormGroup({
-			cpf: new FormControl({}, GenericValidator.isValidCpf()),
+			cpf: new FormControl('', GenericValidator.isValidCpf()),
 		});
 	}
 

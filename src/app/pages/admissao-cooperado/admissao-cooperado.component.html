@@ -1,26 +1,37 @@
-<div class="main-content">
-	<div class="timeline">
-		<span>Inicio</span>
-		<span>Documentos</span>
-		<span>Dados Cadastrais</span>
-		<span>Admissão</span>
-	</div>
-	<div class="text">
-		<h1>Informe o CPF do futuro cooperado (a)</h1>
-		<p>Se necessário, você poderá duplicar uma conta existente ou pausar e retornar este cadastro futuramente.</p>
-		<p>Digite apenas os números (sem pontos ou traços).</p>
-	</div>
-	<div class="form">
-		<form class="form-group" [formGroup]="formCPF" (ngSubmit)="onSubmit()">
-			<div class="form-input">
-				<label for="cpf">CPF</label>
-				<input type="text" name="cpf" id="cpf" formControlName="cpf" mask="000.000.000-00" />
-				<div *ngIf="cpf?.touched && cpf?.dirty && cpf?.getError('cpfNotValid')">O cpf não é válido.</div>
-			</div>
-			<button type="submit">Consultar por CPF</button>
-		</form>
-	</div>
-	<div class="user-situation-container">
-    <app-user-situation [user_situation]="user_situation" *ngIf="user_situation"></app-user-situation>
-	</div>
-</div>
+<app-header></app-header>
+  <div class="main-content w-100 ps-4">
+    <div class="timeline d-flex align-items-center justify-content-center">
+      <span>Inicio</span>
+      <span>Documentos</span>
+      <span>Dados Cadastrais</span>
+      <span>Admissão</span>
+    </div>
+    <div>
+      <h1>Informe o CPF do futuro cooperado (a)</h1>
+      <p>Se necessário, você poderá duplicar uma conta existente ou pausar e retornar este cadastro futuramente.</p>
+      <p>Digite apenas os números (sem pontos ou traços).</p>
+    </div>
+    <div>
+      <form class="form-inline d-flex" [formGroup]="formCPF" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="cpf">CPF</label>
+          <input
+            class="form-control"
+            type="text"
+            name="cpf"
+            id="cpf"
+            formControlName="cpf"
+            mask="000.000.000-00"
+            placeholder="000.000.000-00" />
+          <small class="form-error" *ngIf="cpf?.touched && cpf?.dirty && cpf?.getError('cpfNotValid')"
+            >Informe um CPF válido</small
+          >
+        </div>
+        <button class="btn button-primary" type="submit">Consultar por CPF</button>
+      </form>
+    </div>
+    <div class="mt-3">
+      <app-user-situation [user_situation]="user_situation" *ngIf="user_situation"></app-user-situation>
+    </div>
+  </div>
+<app-footer></app-footer>

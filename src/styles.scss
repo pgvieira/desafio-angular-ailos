@@ -2,11 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:display=swap');
 
 :root {
-  --color-primary: rgb(22, 92, 125);
-  --color-white: rgb(255, 255, 255);
-  --color-background: rgb(232, 239, 242);
+	--color-primary: rgb(22, 92, 125);
+	--color-white: rgb(255, 255, 255);
+	--color-danger: rgb(193, 48, 24);
+	--color-background: rgb(232, 239, 242);
+	--color-black-ailos: rgb(4, 15, 20);
+	--color-gray-4: rgb(136, 148, 153);
+	--color-critic-green: rgb(0, 194, 70);
 }
 
-html, body {
-  height: 100%;
+html,
+body {
+	height: 100%;
 }

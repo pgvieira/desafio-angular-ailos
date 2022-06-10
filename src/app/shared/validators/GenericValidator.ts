@@ -4,13 +4,13 @@ export class GenericValidator {
 	constructor() {}
 
 	static isValidCpf() {
-		return (control: AbstractControl): Validators => {
+		return (control: AbstractControl): Validators | null => {
 			const cpf = control.value;
 			if (cpf) {
 				let numbers, digits, sum, i, result, equalDigits;
 				equalDigits = 1;
 				if (cpf.length < 11) {
-					return { cpfNotValid: false };
+					return null;
 				}
 
 				for (i = 0; i < cpf.length - 1; i++) {
@@ -44,12 +44,12 @@ export class GenericValidator {
 					if (result !== Number(digits.charAt(1))) {
 						return { cpfNotValid: true };
 					}
-					return { cpfNotValid: false };
+					return null;
 				} else {
 					return { cpfNotValid: true };
 				}
 			}
-			return { cpfNotValid: false };
+			return null;
 		};
 	}
 }
