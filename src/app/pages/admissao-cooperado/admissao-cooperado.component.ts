@@ -12,6 +12,26 @@ import { UserSituation } from '../../shared/models';
 export class AdmissaoCooperadoComponent implements OnInit {
 	formCPF: FormGroup;
 	user_situation: UserSituation | undefined;
+	loading: boolean = false;
+	disableButton: boolean = false;
+	itemsTimeline = [
+		{
+			title: 'Início',
+			habilitado: true,
+		},
+		{
+			title: 'Documentos',
+			habilitado: false,
+		},
+		{
+			title: 'Dados Cadastrais',
+			habilitado: false,
+		},
+		{
+			title: 'Admissão',
+			habilitado: false,
+		},
+	];
 
 	constructor(private consultaService: ConsultaCpfService) {
 		this.formCPF = new FormGroup({
@@ -26,9 +46,19 @@ export class AdmissaoCooperadoComponent implements OnInit {
 	}
 
 	onSubmit(): void {
+		this.loading = true;
+		this.disableButton = true;
 		const cpf = this.cpf?.value;
-		this.consultaService.consultaCPF(cpf).subscribe((value) => {
-			this.user_situation = value[0];
-		});
+		this.consultaService.consultaCPF(cpf).subscribe(
+			(value) => {
+				this.user_situation = value[0];
+			},
+			() => {
+				this.disableButton = false;
+			},
+			() => {
+				this.loading = false;
+			}
+		);
 	}
 }

@@ -1,0 +1,12 @@
+<div class="row">
+	<div class="timeline-steps">
+		<ng-template ngFor let-item [ngForOf]="items">
+			<div class="timeline-step" [ngClass]="item?.habilitado ? 'border-habilitado' : 'border-nao-habilitado'">
+				<div class="timeline-content">
+					<div class="inner-circle" [ngClass]="item?.habilitado ? 'circle-habilitado' : 'circle-nao-habilitado'"></div>
+					<p [ngClass]="item?.habilitado ? 'p-habilitado' : 'p-nao-habilitado'">{{ item?.title }}</p>
+				</div>
+			</div>
+		</ng-template>
+	</div>
+</div>

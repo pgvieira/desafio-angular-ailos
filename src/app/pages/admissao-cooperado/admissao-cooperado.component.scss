@@ -53,6 +53,7 @@ input {
 }
 
 .btn {
+  width: 200px !important;
 	height: 35px;
 	padding: 0 24px;
 	border-radius: 2px;
@@ -60,6 +61,7 @@ input {
 	font-size: 14px;
 	font-weight: 700;
 	margin-top: 16px;
+  text-align: -webkit-center;
 }
 .btn:focus {
 	outline: 0;
